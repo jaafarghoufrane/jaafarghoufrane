@@ -4,10 +4,9 @@ import { useParams } from 'react-router-dom';
 
 const listeinscription= () => {
   const { ville } = useParams();
-  const [inscriptions, setInscriptions] = useState([]); // Vous devrez récupérer les données de l'API
+  const [inscriptions, setInscriptions] = useState([]);
   const [searchVille, setSearchVille] = useState('');
 
-  // Filtrer les inscriptions en fonction de la ville saisie
   const filteredInscriptions = inscriptions.filter((inscription) =>
     inscription.toLowerCase().includes(searchVille.toLowerCase())
   );
